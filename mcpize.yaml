@@ -1,34 +1,25 @@
+# MCPize Configuration
+# Docs: https://mcpize.com/docs/mcpize-yaml
+
 version: 1
-name: freshdesk-ops-intelligence-mcp
-description: |
-  Production-safe Freshdesk MCP with native SLA breach detection, dry-run
-  ticket writes, multi-channel analytics, canned response authoring, and
-  weekly ops digest for growing multi-channel support teams.
+
+name: "Freshdesk Ops Intelligence MCP"
+slug: "freshdesk-ops-intelligence-mcp"
 
 runtime: typescript
-entry: src/index.ts
 
 build:
-  install: npm install
-  command: npm run build
+  install: "npm install"
+  command: "npm run build"
 
-startCommand:
+start:
   type: stdio
-  command: node dist/index.js
+  command: "node dist/index.js"
 
 credentials:
-  - name: FRESHDESK_DOMAIN
-    required: true
+  - name: "FRESHDESK_DOMAIN"
     description: "Your Freshdesk subdomain (e.g. mycompany for mycompany.freshdesk.com)"
-    docs_url: https://support.freshdesk.com/en/support/solutions/articles/215517
-    mapping:
-      env: FRESHDESK_DOMAIN
-
-  - name: FRESHDESK_API_KEY
-    required: true
+    docs_url: "https://support.freshdesk.com/en/support/solutions/articles/215517"
+  - name: "FRESHDESK_API_KEY"
     description: "API key from Freshdesk Profile Settings → API Key"
-    docs_url: https://support.freshdesk.com/en/support/solutions/articles/215517
-    mapping:
-      env: FRESHDESK_API_KEY
-
-credentials_mode: per_user
+    docs_url: "https://support.freshdesk.com/en/support/solutions/articles/215517"
