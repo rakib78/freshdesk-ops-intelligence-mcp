@@ -3,9 +3,20 @@
 > Production-safe Freshdesk MCP for Claude, Cursor, and any MCP-compatible AI assistant.
 > Native SLA breach detection · Dry-run writes · Multi-channel analytics · Canned response authoring
 
+[![MCPize](https://mcpize.com/badge/@rkbzddev/freshdesk-ops-intelligence-mcp)](https://mcpize.com/mcp/freshdesk-ops-intelligence-mcp)
 [![MCPize](https://img.shields.io/badge/MCPize-Marketplace-blue)](https://mcpize.com/mcp/freshdesk-ops-intelligence-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+---
+## Connect via MCPize
+
+Use this MCP server instantly with no local installation:
+
+```bash
+npx -y mcpize connect @rkbzddev/freshdesk-ops-intelligence-mcp --client claude
+```
+
+Or connect at: **https://mcpize.com/mcp/freshdesk-ops-intelligence-mcp**
 ---
 
 ## Why this server exists
