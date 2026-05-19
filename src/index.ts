@@ -347,6 +347,6 @@ function zodToSchema(s: z.ZodTypeAny): unknown {
   }
   if (s instanceof z.ZodEnum) return { type: "string", enum: s.options };
   if (s instanceof z.ZodArray) return { type: "array", items: zodToSchema(s.element) };
-  if (s instanceof z.ZodRecord) return { type: "object", additionalProperties: zodToSchema(s.valueType) };
+  if (s instanceof z.ZodRecord) return { type: "object" };
   return {};
 }
